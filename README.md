@@ -12,6 +12,8 @@
 * Linux OS ( Windows not supported )
 * JBoss 7.0.0 EAP - https://developers.redhat.com/products/eap/download/
 * Atleast 3 Phyiscal machines or VMs having linux on them. 1 for master and 2 for slaves. All the machines must have the above pre-requisites.
+* **Note** - For the scripts to run successfully and to achieve the desired objective, all your slaves and master must be within the same network or domain.
+
 
 # How do i use this ?
 * Clone  the *master* branch into a suitable directory

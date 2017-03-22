@@ -31,3 +31,12 @@
     * Open master.properties file located in cloned directory and fill in the following based on your configuration
     * *JBOSS_HOME* - path to where you have extracted jboss7.zip in master machine, *ADMIN_USERNAME* & *ADMIN_PASSWORD* = user name and password in-order to login to jboss admin console , once the setup is up.
   
+* **Starting the script**
+* Assuming you have all the pre-requisites in place and after you have configured the master and slaves according to above steps, you can start the script as following:
+
+* cd to the directory where you have cloned the repo
+* Execute the following:
+  > python setup-jboss-cluster.py -m=<ip_address_of_the_master> -s=<comma_separated_ip_addresses_of_the_slaves>
+  
+ * Example
+  > python setup-jboss-cluster.py -m=192.168.1.2 -s=192.168.1.3,192.168.1.4 

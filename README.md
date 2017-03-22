@@ -17,9 +17,17 @@
 * Clone  the *master* branch into a suitable directory
 * Download JBoss 7.0.0 EAP.zip and extract into Master and Slave machines
 * Before running the main script, you will have to configure the details of Slaves and Master.Below steps explain how you have to
-* Configuring Slaves
+* **Configuring Slaves**
   * Open *slaves.properties* file located in cloned directory and fill in the following based on your configuration
   
   
   ![slaves_properties](https://cloud.githubusercontent.com/assets/5040809/24194306/96726092-0f1b-11e7-8d40-e6d2740d7c0d.png)
 
+  * <Slave_IP> -  IP address of the Slave machine
+  * JBOSS_HOME - path to the directory where you have extracted jboss-7-eap in slave machine
+  * USER_NAME - Slave user, HOST_PASSWORD - password that will get converted to bas64 string 
+  
+  * **Configuring Master**
+    * Open master.properties file located in cloned directory and fill in the following based on your configuration
+    * *JBOSS_HOME* - path to where you have extracted jboss7.zip in master machine, *ADMIN_USERNAME* & *ADMIN_PASSWORD* = user name and password in-order to login to jboss admin console , once the setup is up.
+  

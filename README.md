@@ -15,4 +15,6 @@
 * Clone  the *master* branch into a suitable directory
 * Download JBoss 7.0.0 EAP.zip and extract into Master and Slave machines
 * Before running the main script, you will have to configure the details of Slaves and Master.Below steps explain how you have to
+* Configuring Slaves
+  * Open slaves.properties file located in cloned directory and fill in the following based on your configuration
 

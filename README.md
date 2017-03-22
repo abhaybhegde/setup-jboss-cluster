@@ -42,3 +42,19 @@
   
  * Example
   > python setup-jboss-cluster.py -m=192.168.1.2 -s=192.168.1.3,192.168.1.4 
+  
+ * Once the scripts completes execution, you can start the master followed by slaves as below:
+   
+   **Starting master**
+    * > cd to JBOSS_HOME
+    * > ./bin/domain.sh --domain-config=domain.xml --host-config=host.xml -P domain_master.properties &
+    
+   **Starting slave**
+   * > cd to JBOSS_HOME of the Slave
+   * > ./bin/domain.sh --host-config=host-slave.xml -P domain.properties &
+   
+ * If all goes well you should see the slaves connecting to master , similar to the below image
+ 
+ ![slave_registration](https://cloud.githubusercontent.com/assets/5040809/24197076/2e94cca2-0f26-11e7-9215-a107655574b2.JPG)
+ 
+  

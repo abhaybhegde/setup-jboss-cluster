@@ -1,11 +1,12 @@
-import sys
-import getopt
+from add_users import add_users
+from execute_utility_scripts import execute_utility_scripts
 from health_check.check_network_connectivity import are_all_machines_reachable
 from health_check.copy_asset_files import create_slaves
 from health_check.copy_asset_files import process_slave_objects
-from add_users import add_users
-from execute_utility_scripts import execute_utility_scripts
 from start_jboss import start_jboss
+
+import getopt
+import sys
 
 def setup_jboss_cluster(argument_list):
     are_all_machines_reachable(argument_list)

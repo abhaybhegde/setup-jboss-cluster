@@ -1,5 +1,5 @@
+from slave import Slave
 import unittest
-from slave import Slave 
 
 
 class SlaveTest(unittest.TestCase):
@@ -8,7 +8,6 @@ class SlaveTest(unittest.TestCase):
 
 
     def test_get_slave_ip(self):
-       #slaveObj = Slave('192.168.1.2','/home/jboss_home','userName','passWord','hostUserName','hostPassword')
        self.assertEquals('192.168.1.2',self.slaveObj.get_slave_ip())
 
     def test_get_jboss_home(self):
@@ -28,8 +27,8 @@ class SlaveTest(unittest.TestCase):
 
     def test_get_host_pasword(self):
         self.assertEquals('hostPassword',self.slaveObj.get_host_password())
-       
+
 
 
 if __name__=="__main__":
-   unittest.main() 
+   unittest.main()

@@ -1,6 +1,6 @@
-import unittest
-from check_network_connectivity import are_all_machines_reachable
 from check_network_connectivity import are_all_ips_reachable
+from check_network_connectivity import are_all_machines_reachable
+import unittest
 
 class TestNetworkConnectivity(unittest.TestCase):
     """Unit test cases for $SCRIPTS_ROOT/health_check/check_network_connectivity.py"""

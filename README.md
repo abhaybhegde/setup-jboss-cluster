@@ -1,4 +1,5 @@
-# setup-jboss-cluster
+
+# setup-jboss-cluster  [![Build Status](https://travis-ci.org/abhaybhegde/setup-jboss-cluster.svg?branch=master)](https://travis-ci.org/abhaybhegde/setup-jboss-cluster)
 
 # What is this ?
 * Utililty scripts which will hep you configure a cluster setup on JBoss 7.0.0 EAP

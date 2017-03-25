@@ -4,15 +4,20 @@ Created on 26-Jan-2017
 @author: abhay
 '''
 
-import sys
 import subprocess
+import sys
 
 
 def are_all_machines_reachable(argument_list):
-    # print 'Number of arguments:', len(argument_list)
-
+    if not argument_list:
+        print "Arguments given is empty."
+        raise ValueError
     if is_master_reachable(argument_list[0]) == True and are_all_slaves_reachable(argument_list[1]) == True:
         print "All machines are connectable"
+    else:
+        #One or more machines are not reachable. Hence quit the application
+        sys.exit()
+
 
 
 def are_all_slaves_reachable(argument_list):
@@ -42,12 +47,21 @@ def get_master_ip(master_ip):
 
 
 def are_all_ips_reachable(ip_list):
+    if not ip_list:
+        raise ValueError
     for ip in ip_list:
         print "Pinging %s" % ip
-        if ping(ip) != 0:
+        returnCode = ping(ip) 
+#            print "Host %s is not reachable.Please check your network connection.Exiting..." % ip
+#            sys.exit()
+#        else:
+#            return True
+        if returnCode == 0:
+           continue 
+        elif returnCode == 1:
             print "Host %s is not reachable.Please check your network connection.Exiting..." % ip
-            sys.exit()
-    return True
+            return False
+    return True 
 
 
 def ping(ip):
@@ -57,4 +71,8 @@ def ping(ip):
 
 
 if __name__ == '__main__':
-    are_all_machines_reachable(sys.argv)
+    # To test at a module level
+    # Run from command line as below
+    #python check_network_connectivity.py -m=<IP1> -s=<IP2>,<IP3>
+    #IP1 could be master IP , IP2,IP3 are slave Ips
+    are_all_machines_reachable(sys.argv[1:])

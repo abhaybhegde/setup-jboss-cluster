@@ -41,6 +41,9 @@ def is_master_reachable(master_ip):
 
 
 def get_master_ip(master_ip):
+    if not master_ip:
+        raise ValueError
+
     ip = master_ip
     list_of_ips = ip.split("=")
     return list_of_ips[1:]

@@ -1,5 +1,4 @@
-from check_network_connectivity import are_all_ips_reachable
-from check_network_connectivity import are_all_machines_reachable
+from check_network_connectivity import *
 import unittest
 
 class TestNetworkConnectivity(unittest.TestCase):
@@ -19,6 +18,15 @@ class TestNetworkConnectivity(unittest.TestCase):
         result =  are_all_ips_reachable(argumentList)
         self.assertEqual(False,result)
 
+    def test_get_master_ip(self):
+        masterIp = "-m=192.169.1.1"
+        result = get_master_ip(masterIp)
+        expected = ['192.169.1.1']
+        self.assertEqual(result,expected)
+
+    def test_get_master_ip_for_empty_input(self):
+        masterIp = None;
+        self.assertRaises(ValueError,get_master_ip,masterIp)
 
 if __name__ == "__main__":
     unittest.main()

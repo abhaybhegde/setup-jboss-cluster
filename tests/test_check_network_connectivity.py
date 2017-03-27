@@ -28,5 +28,13 @@ class TestNetworkConnectivity(unittest.TestCase):
         masterIp = None;
         self.assertRaises(ValueError,get_master_ip,masterIp)
 
+    def test_is_master_reachable_for_empty_input(self):
+        masterIp = None
+        self.assertRaises(ValueError,is_master_reachable,masterIp)
+
+    def test_is_master_reachable_for_non_reachable_ip(self):
+        masterIp = "-m=10.10.10.1"
+        self.assertFalse(is_master_reachable(masterIp))
+
 if __name__ == "__main__":
     unittest.main()

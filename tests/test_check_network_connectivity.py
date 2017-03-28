@@ -36,5 +36,11 @@ class TestNetworkConnectivity(unittest.TestCase):
         masterIp = "-m=10.10.10.1"
         self.assertFalse(is_master_reachable(masterIp))
 
+    def test_get_all_slaves_ip_as_a_list(self):
+        slaveIps = "-s=10.10.10.1,10.10.10.2"
+        expected = ['10.10.10.1','10.10.10.2']
+        actual = get_all_slaves_ip_as_a_list(slaveIps)
+        self.assertEquals(expected,actual)
+
 if __name__ == "__main__":
     unittest.main()

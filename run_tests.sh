@@ -6,6 +6,6 @@ PROJECT_ROOT=`pwd`
 echo "Currently in $PROJECT_ROOT"
 cd $PROJECT_ROOT/tests
 export PYTHONPATH=$PROJECT_ROOT/health_check:$PROJECT_ROOT/configure_slaves
-python -m unittest test_check_network_connectivity
-python -m unittest test_slave
-python -m unittest test_generate_key_value_pair
+#Run all unit tests and calculate the code coverage. 
+#Consolidated code coverage will be present in $PROJECT_ROOT/tests/htmlcov
+coverage run unit_test_suite.py

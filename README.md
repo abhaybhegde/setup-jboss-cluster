@@ -7,7 +7,7 @@
 ![pythonpath](https://cloud.githubusercontent.com/assets/5040809/24194892/bc656e8c-0f1d-11e7-88cd-a25ea6273bcd.png)
 
 # What do i require to use this?
-* Python 2.6 or above
+* Python 2.7 or above
 * Paramiko module for python - http://www.paramiko.org/
 * Java 8
 * Linux OS ( Windows not supported )

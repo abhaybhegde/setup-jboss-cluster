@@ -1,5 +1,5 @@
-import os
 from xml.dom import minidom
+import os
 
 
 def get_slave_attributes():
